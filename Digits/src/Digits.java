@@ -7,9 +7,6 @@ public class Digits {
     }
     public static void main( String [] args )
     {
-        System.out.println ( "Task 10" );
-        System.out.println ( mod ( 5, 2 ) );
-        System.out.println ( mod ( 218, 5 ) );
-        System.out.println ( mod ( 6, 3 ) );
+        System.out.println ( "Hello World!!!" );
     }
 }
