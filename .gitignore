@@ -2,6 +2,8 @@
 *.class
 # Executable files
 *.exe
+*/.vscode/
+*/bin/
 # Log file
 *.log
 
