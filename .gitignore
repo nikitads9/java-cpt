@@ -2,8 +2,9 @@
 *.class
 # Executable files
 *.exe
+# Folders
 */.vscode/
-*/bin/
+*/Digits/bin/
 # Log file
 *.log
 
