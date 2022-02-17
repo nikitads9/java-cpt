@@ -1,4 +1,4 @@
-public class Palindrome {
+public class Palindrome { //Программа считывает полученные через терминал слова и проверяет является ли каждое слово палиндромом
     public static void main(String[] args)  {
         //String[] initial = {"meme", "lol", "tenet"};
 
