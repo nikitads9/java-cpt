@@ -1,9 +1,9 @@
 // класс точки в двумерном пространстве
 public class Point2d {
     //координата X
-        private double xCoord;
+        protected double xCoord;
     // координата Y 
-        private double yCoord;
+        protected double yCoord;
     // Конструктор инициализации
         public Point2d ( double x, double y) {
             xCoord = x;
