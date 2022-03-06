@@ -4,8 +4,6 @@
  * really doesn't need to maintain any state between invocations of the
  * algorithm.
  */
-import java.util.HashMap;
-import java.util.HashSet;
 
 public class AStarPathfinder 
 {
