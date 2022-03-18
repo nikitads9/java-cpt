@@ -46,7 +46,6 @@ public class FractalExplorer {
         JFrame frame = new JFrame("Fractal explorer");
         frame.add(this.image, BorderLayout.CENTER);
         JButton resetButton = new JButton("Reset"); //Создание объекта кнопки сброса
-        frame.add(resetButton, BorderLayout.SOUTH);
 
 
         ButtonHandler resetHandler = new ButtonHandler();
@@ -55,8 +54,7 @@ public class FractalExplorer {
         image.addMouseListener(click);
 
         JComboBox<FractalGenerator> myComboBox = new JComboBox<>();
-        
-        /** Add each fractal type object to the combo box. **/
+        /** Добавляем элементы в ComboBox **/
         FractalGenerator mandelbrotFractal = new Mandelbrot();
         myComboBox.addItem(mandelbrotFractal);
         FractalGenerator tricornFractal = new Tricorn();
@@ -64,24 +62,21 @@ public class FractalExplorer {
         FractalGenerator burningShipFractal = new BurningShip();
         myComboBox.addItem(burningShipFractal);
         
-        /** Instance of ButtonHandler on the combo box. **/
+        /** Обработчиком нажатия на элемент комбобокс будет ButtonHandler **/
         ButtonHandler fractalChooser = new ButtonHandler();
         myComboBox.addActionListener(fractalChooser);
-        
         /**
-         * Create a new JPanel object, add a JLabel object and a JComboBox
-         * object to it, and add the panel into the frame in the NORTH
-         * position in the layout.
+         * Создаем панель и добавляем в нее комбобокс с пояснительной надписью Fractal
+         * Расположение выпаающего списка - верхняя часть окна.
          */
         JPanel myPanel = new JPanel();
         JLabel myLabel = new JLabel("Fractal:");
         myPanel.add(myLabel);
         myPanel.add(myComboBox);
         frame.add(myPanel, BorderLayout.NORTH);
-        
         /**
-         * Create a save button, add it to a JPanel in the BorderLayout.SOUTH
-         * position along with the reset button.
+         * Создаем кнопку Save 
+         * располагаем ее в нижней части окна.
          */
         JButton saveButton = new JButton("Save");
         JPanel myBottomPanel = new JPanel();
@@ -89,7 +84,7 @@ public class FractalExplorer {
         myBottomPanel.add(resetButton);
         frame.add(myBottomPanel, BorderLayout.SOUTH);
         
-        /** Instance of ButtonHandler on the save button. **/
+        /** Обработчиком события нажатия на кнопку выбирается ButtonHandler **/
         ButtonHandler saveHandler = new ButtonHandler();
         saveButton.addActionListener(saveHandler);
 
@@ -169,8 +164,7 @@ public class FractalExplorer {
                         JOptionPane.showMessageDialog(image, "Image saved");
                     }
                     catch (Exception ex){
-                        JOptionPane.showMessageDialog(image,
-                        ex.getMessage(), "Cannot Save Image",
+                        JOptionPane.showMessageDialog(image, ex.getMessage(), "Cannot Save Image",
                         JOptionPane.ERROR_MESSAGE);
                     }
                 }
